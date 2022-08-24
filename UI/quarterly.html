@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Users / Profile - NiceAdmin Bootstrap Template</title>
+    <title>Analytics</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -273,8 +273,6 @@
                 </a>
             </li><!-- End Dashboard Nav -->
 
-
-
             <li class="nav-item">
                 <a class="nav-link collapsed" href="studentProfile.html">
                     <i class="bi bi-person"></i>
@@ -392,6 +390,111 @@
 
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
+        <div class="d-flex justify-content-evenly" style="padding:5%;">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Bar Chart depiction Regional office against no. of activities conducted</h5>
+  
+                <!-- Bar Chart -->
+                <canvas id="barChart" style="max-height: 400px;"></canvas>
+                <script>
+                  document.addEventListener("DOMContentLoaded", () => {
+                    new Chart(document.querySelector('#barChart'), {
+                      type: 'bar',
+                      data: {
+                        labels: ['Bangalore', 'Chandigarh', 'Chennai', 'Cuttack', 'Goa', 'Guwahati', 'Hyderabad','Jaipur', 'Kolkata', 'Lucknow', 'Mumbai','New Delhi', 'Patna', 'Pune', 'Shillong','Thiruvananthapuram', 'Varanasi'],
+                        datasets: [{
+                          label: 'Regional office vs no. of activites',
+                          data: [200, 170, 230, 235, 170, 165, 120,300, 170, 230, 235, 170, 165, 120,200, 170, 230],
+                          backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(255, 205, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(201, 203, 207, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(255, 205, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(201, 203, 207, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(255, 205, 86, 0.2)'
+                          ],
+                          borderColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(255, 159, 64)',
+                            'rgb(255, 205, 86)',
+                            'rgb(75, 192, 192)',
+                            'rgb(54, 162, 235)',
+                            'rgb(153, 102, 255)',
+                            'rgb(201, 203, 207)',
+                            'rgb(255, 99, 132)',
+                            'rgb(255, 159, 64)',
+                            'rgb(255, 205, 86)',
+                            'rgb(75, 192, 192)',
+                            'rgb(54, 162, 235)',
+                            'rgb(153, 102, 255)',
+                            'rgb(201, 203, 207)',
+                            'rgb(255, 99, 132)',
+                            'rgb(255, 159, 64)',
+                            'rgb(255, 205, 86)'
+                          ],
+                          borderWidth: 1
+                        }]
+                      },
+                      options: {
+                        scales: {
+                          y: {
+                            beginAtZero: true
+                          }
+                        }
+                      }
+                    });
+                  });
+                </script>
+                </div>
+            </div>
+                <!-- End Bar CHart -->
+                <div class="card">
+                <div class="card-body">
+                <canvas id="pieChart" style="max-height: 400px;"></canvas>
+                <script>
+                  document.addEventListener("DOMContentLoaded", () => {
+                    new Chart(document.querySelector('#pieChart'), {
+                      type: 'pie',
+                      data: {
+                        labels: [
+                          'Horizon series/Kala vishwa program',
+                          'International student welfare',
+                          'Exhibitions/Seminar',
+                          'Scholarships',
+                          'Distinguished visitors'
+                        ],
+                        datasets: [{
+                          label: 'My First Dataset',
+                          data: [90, 90, 45,45,21],
+                          backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)',
+                            'rgb(255, 205, 86)',
+                             'rgb(128,0,128)',
+                             'rgb(255, 165, 0)'
+  
+                          ],
+                          hoverOffset: 4
+                        }]
+                      }
+                    });
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
 
 </body>
 
